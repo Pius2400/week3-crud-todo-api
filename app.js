@@ -43,10 +43,8 @@ app.get('/todos/:id', (req, res) => {
   res.status(200).json(todo);
 });
 
-  const newTodo = { id: todos.length + 1, ...req.body }; // Auto-ID
-  todos.push(newTodo);
-  res.status(201).json(newTodo); // Echo back
-});
+  
+
 
 // PATCH Update – Partial
 app.patch('/todos/:id', (req, res) => {
